@@ -38,6 +38,7 @@ reports/*.txt
 arca_explorer/sources/
 arca_explorer/reports/
 arca_mapper/outputs/
+
 # =========================
 # Temporary / backups
 # =========================
