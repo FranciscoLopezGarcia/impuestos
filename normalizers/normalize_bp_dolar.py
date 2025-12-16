@@ -1,0 +1,72 @@
+import json
+from pathlib import Path
+from utils import to_number
+
+RAW = Path("../outputs/raw_monedas_2024.json")
+
+def _find_dolar(lista):
+    for item in lista:
+        desc = (item.get("descripcion") or "").upper()
+        if "DOLAR" in desc or "DÓLAR" in desc:
+            return item
+    return None
+
+def normalize_bp_dolar():
+    data = json.loads(RAW.read_text(encoding="utf-8"))
+    anio = data.get("anio")
+    fuente = data.get("fuente", "ARCA")
+
+    billete = _find_dolar(data.get("billetes", []))
+    divisa = _find_dolar(data.get("divisas", []))
+
+    out = []
+
+    if billete:
+        out.append({
+            "concepto": "BP_DOLAR_BILLETE_COMP_31_12",
+            "impuesto": "BIENES_PERSONALES",
+            "anio": anio,
+            "valor_raw": billete.get("comprador"),
+            "valor_num": to_number(billete.get("comprador")),
+            "unidad": "ARS",
+            "fuente": fuente,
+            "origen": "PDF_MONEDA_EXTRANJERA",
+            "url": None,
+        })
+        out.append({
+            "concepto": "BP_DOLAR_BILLETE_VEND_31_12",
+            "impuesto": "BIENES_PERSONALES",
+            "anio": anio,
+            "valor_raw": billete.get("vendedor"),
+            "valor_num": to_number(billete.get("vendedor")),
+            "unidad": "ARS",
+            "fuente": fuente,
+            "origen": "PDF_MONEDA_EXTRANJERA",
+            "url": None,
+        })
+
+    if divisa:
+        out.append({
+            "concepto": "BP_DOLAR_DIVISA_COMP_31_12",
+            "impuesto": "BIENES_PERSONALES",
+            "anio": anio,
+            "valor_raw": divisa.get("comprador"),
+            "valor_num": to_number(divisa.get("comprador")),
+            "unidad": "ARS",
+            "fuente": fuente,
+            "origen": "PDF_MONEDA_EXTRANJERA",
+            "url": None,
+        })
+        out.append({
+            "concepto": "BP_DOLAR_DIVISA_VEND_31_12",
+            "impuesto": "BIENES_PERSONALES",
+            "anio": anio,
+            "valor_raw": divisa.get("vendedor"),
+            "valor_num": to_number(divisa.get("vendedor")),
+            "unidad": "ARS",
+            "fuente": fuente,
+            "origen": "PDF_MONEDA_EXTRANJERA",
+            "url": None,
+        })
+
+    return out
