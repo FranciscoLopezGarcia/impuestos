@@ -1,69 +1,75 @@
+# parsers/parse_monedas_extranjeras_raw.py
+
 import json
 import re
 from pathlib import Path
 import pdfplumber
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-PDF = BASE_DIR / "outputs" / "pdfs" / "Valuaciones-2024-Moneda-Extranjera.pdf"
+PDF_DIR = BASE_DIR / "outputs" / "pdfs"
 OUT = BASE_DIR / "outputs" / "raw_monedas_2024.json"
 
-MONEY_RE = re.compile(r"\d{1,3}(?:\.\d{3})*,\d{2,6}")  # 1.029,000000 / 113.643,398800
 
-def extract_two_numbers(row) -> tuple[str | None, str | None]:
-    """
-    Encuentra los dos primeros valores numéricos (comprador/vendedor)
-    en cualquier posición de la fila.
-    """
-    nums = []
-    for cell in row:
-        if not cell:
-            continue
-        for m in MONEY_RE.findall(str(cell)):
-            nums.append(m)
-        if len(nums) >= 2:
-            break
-    if len(nums) >= 2:
-        return nums[0], nums[1]
-    return None, None
+def to_number(value: str | None):
+    if not value:
+        return None
+    return float(
+        value.replace(".", "").replace(",", ".").strip()
+    )
 
-def parse_table(table, kind: str):
-    out = []
-    for row in table[1:]:
-        if not row:
-            continue
-        desc = (row[0] or "").strip()
-        if not desc:
-            continue
 
-        comprador, vendedor = extract_two_numbers(row)
-        out.append({
-            "descripcion": desc,
-            "comprador": comprador,
-            "vendedor": vendedor
-        })
-    return out
+def main():
+    # Buscar cualquier PDF de moneda extranjera 2024
+    pdfs = list(PDF_DIR.glob("*moneda*extranjera*2024*.pdf"))
 
-def parse():
+    if not pdfs:
+        print("⚠️  No se encontró PDF de Moneda Extranjera 2024. Se omite.")
+        return
+
+    pdf_path = pdfs[0]
+
     data = {
         "anio": 2024,
         "fuente": "ARCA",
-        "divisas": [],
-        "billetes": [],
+        "origen": "PDF_MONEDA_EXTRANJERA",
+        "valores": {},
     }
 
-    with pdfplumber.open(PDF) as pdf:
-        page = pdf.pages[0]
-        tables = page.extract_tables() or []
+    with pdfplumber.open(pdf_path) as pdf:
+        for page in pdf.pages:
+            text = page.extract_text() or ""
+            lines = text.splitlines()
 
-        if len(tables) < 2:
-            raise RuntimeError(f"Se esperaban 2 tablas (DIVISAS y BILLETES). Detectadas: {len(tables)}")
+            for line in lines:
+                l = line.lower()
 
-        # En este PDF salen como table[0]=DIVISAS y table[1]=BILLETES
-        data["divisas"] = parse_table(tables[0], "divisas")
-        data["billetes"] = parse_table(tables[1], "billetes")
+                if "billete" in l and "compra" in l:
+                    m = re.search(r"([\d\.,]+)", line)
+                    if m:
+                        data["valores"]["billete_compra"] = m.group(1)
 
-    OUT.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"OK -> {OUT}")
+                if "billete" in l and "venta" in l:
+                    m = re.search(r"([\d\.,]+)", line)
+                    if m:
+                        data["valores"]["billete_venta"] = m.group(1)
+
+                if "divisa" in l and "compra" in l:
+                    m = re.search(r"([\d\.,]+)", line)
+                    if m:
+                        data["valores"]["divisa_compra"] = m.group(1)
+
+                if "divisa" in l and "venta" in l:
+                    m = re.search(r"([\d\.,]+)", line)
+                    if m:
+                        data["valores"]["divisa_venta"] = m.group(1)
+
+    OUT.write_text(
+        json.dumps(data, indent=2, ensure_ascii=False),
+        encoding="utf-8"
+    )
+
+    print(f"✅ Monedas extranjeras RAW generado: {OUT}")
+
 
 if __name__ == "__main__":
-    parse()
+    main()

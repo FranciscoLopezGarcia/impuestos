@@ -64,7 +64,23 @@ def crawl(url: str, depth: int = 0, max_depth: int = 4):
 
     time.sleep(0.5)  # ser prolijos con ARCA
 
+def run():
+    """
+    Ejecuta el crawling dirigido y devuelve la lista de PDFs encontrados
+    """
+    global visited, found_pdfs
+    visited = set()
+    found_pdfs = set()
+
+    for seed in SEEDS:
+        crawl(seed)
+
+    return sorted(found_pdfs)
+
+
 if __name__ == "__main__":
+    from tqdm import tqdm
+
     for seed in tqdm(SEEDS, desc="Crawling dirigido ARCA"):
         crawl(seed)
 

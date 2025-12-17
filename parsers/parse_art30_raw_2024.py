@@ -1,80 +1,88 @@
+# parsers/parse_art30_raw_2024.py
+
 import json
 import re
 from pathlib import Path
+
 import pdfplumber
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-PDF = BASE_DIR / "outputs" / "pdfs" / "Deducciones-personales-art-30-liq-anual-2025.pdf"
-OUT = Path(__file__).resolve().parents[1] / "outputs" / "raw_art30_2024.json"
+PDF_DIR = BASE_DIR / "outputs" / "pdfs"
+OUT = BASE_DIR / "outputs" / "raw_art30_2024.json"
 
-def norm_key(label: str) -> str:
-    s = label.lower().strip()
 
-    if "ganancias no imponibles" in s:
-        return "ganancia_no_imponible"
-    if "cónyuge" in s or "conyuge" in s:
-        return "cargas_familia_conyuge"
-    if "hijo incapacitado" in s:
-        return "cargas_familia_hijo_incapacitado"
-    if re.search(r"\b2\.\s*hijo\b", s) or s.startswith("2. hijo"):
-        return "cargas_familia_hijo"
-
-    # deducciones especiales
-    if "deducción especial" in s or "deduccion especial" in s:
-        if "apartado 1" in s and "nuevos" in s:
-            return "deduccion_especial_ap1_nuevos"
-        if "apartado 1" in s:
-            return "deduccion_especial_ap1"
-        if "apartado 2" in s:
-            return "deduccion_especial_ap2"
-        return "deduccion_especial"
-
-    return ""
-
-def first_money(cell: str) -> str | None:
-    if not cell:
+def to_number(value: str | None):
+    if not value:
         return None
-    # captura formatos tipo 4.507.505,52 o 15.776.269,32
-    m = re.search(r"(\d{1,3}(?:\.\d{3})*,\d{2})", cell)
-    return m.group(1) if m else None
+    return float(
+        value.replace(".", "").replace(",", ".").strip()
+    )
 
-def parse():
+
+def main():
+    pdfs = list(PDF_DIR.glob("*art-30*2024*.pdf"))
+
+    if not pdfs:
+        raise RuntimeError(
+            "No se encontró PDF Art. 30 2024 en outputs/pdfs"
+        )
+
+    pdf_path = pdfs[0]
+
     data = {
-        "anio": 2025,
+        "anio": None,
         "fuente": "ARCA",
-        "items": {}
+        "origen": "PDF_ART_30",
+        "items": {},
     }
 
-    with pdfplumber.open(PDF) as pdf:
-        page = pdf.pages[0]
-        tables = page.extract_tables() or []
+    with pdfplumber.open(pdf_path) as pdf:
+        for page in pdf.pages:
+            text = page.extract_text() or ""
 
-        if not tables:
-            raise RuntimeError("No se detectaron tablas en el PDF (raro).")
+            # Intentar inferir año
+            if data["anio"] is None:
+                m = re.search(r"20\d{2}", text)
+                if m:
+                    data["anio"] = int(m.group(0))
 
-        # En este PDF hay 1 tabla buena
-        table = tables[0]
+            lines = text.splitlines()
 
-        for row in table:
-            if not row or len(row) < 2:
-                continue
+            for line in lines:
+                l = line.lower()
 
-            label = (row[0] or "").strip()
-            value = (row[1] or "").strip()
+                if "ganancia no imponible" in l:
+                    m = re.search(r"([\d\.,]+)", line)
+                    if m:
+                        data["items"]["ganancia_no_imponible"] = m.group(1)
 
-            # saltar header
-            if "CONCEPTO" in label.upper():
-                continue
+                if "cónyuge" in l or "conyuge" in l:
+                    m = re.search(r"([\d\.,]+)", line)
+                    if m:
+                        data["items"]["cargas_conyuge"] = m.group(1)
 
-            key = norm_key(label)
-            money = first_money(value)
+                if "hijo" in l and "incapacitado" not in l:
+                    m = re.search(r"([\d\.,]+)", line)
+                    if m:
+                        data["items"]["cargas_hijo"] = m.group(1)
 
-            # Solo guardar si encontramos clave + monto
-            if key and money:
-                data["items"][key] = money
+                if "hijo incapacitado" in l:
+                    m = re.search(r"([\d\.,]+)", line)
+                    if m:
+                        data["items"]["cargas_hijo_incap"] = m.group(1)
 
-    OUT.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"OK -> {OUT}")
+                if "deducción especial" in l or "deduccion especial" in l:
+                    m = re.search(r"([\d\.,]+)", line)
+                    if m:
+                        data["items"]["deduccion_especial"] = m.group(1)
+
+    OUT.write_text(
+        json.dumps(data, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    print(f"✅ Art. 30 RAW generado: {OUT}")
+
 
 if __name__ == "__main__":
-    parse()
+    main()

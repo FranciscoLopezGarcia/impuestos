@@ -1,0 +1,238 @@
+{
+  "source": "https://www.arca.gob.ar/gananciasYBienes/bienes-personales/declaracion-jurada/determinativa.asp",
+  "thresholds": [
+    {
+      "year": 2024,
+      "amount_raw": "$ 292.994.964,89",
+      "text": "Para el período 2024: $ 292.994.964,89",
+      "xpath": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/article[1]/ul[1]/li[1]"
+    },
+    {
+      "year": 2023,
+      "amount_raw": "$ 100.000.000",
+      "text": "Para el período 2023: $ 100.000.000",
+      "xpath": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/article[1]/ul[1]/li[2]"
+    },
+    {
+      "year": 2022,
+      "amount_raw": "$ 11.282.141,08",
+      "text": "Para el período 2022: $ 11.282.141,08",
+      "xpath": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/article[1]/ul[1]/li[3]"
+    },
+    {
+      "year": 2021,
+      "amount_raw": "$ 6.000.000",
+      "text": "Para el período 2021: $ 6.000.000",
+      "xpath": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/article[1]/ul[1]/li[4]"
+    },
+    {
+      "year": 2020,
+      "amount_raw": "$ 2.000.000",
+      "text": "Para el período 2020: $ 2.000.000",
+      "xpath": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/article[1]/ul[1]/li[5]"
+    },
+    {
+      "year": 2019,
+      "amount_raw": "$ 2.000.000",
+      "text": "Para el período 2019: $ 2.000.000",
+      "xpath": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/article[1]/ul[1]/li[6]"
+    },
+    {
+      "year": 2018,
+      "amount_raw": "$ 1.050.000",
+      "text": "Para el período 2018: $ 1.050.000",
+      "xpath": "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/article[1]/ul[1]/li[7]"
+    }
+  ],
+  "years_detected": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "text_blocks": [
+    {
+      "type": "h1",
+      "text": "Bienes personales"
+    },
+    {
+      "type": "li",
+      "text": "Inicio"
+    },
+    {
+      "type": "li",
+      "text": "Accesos Conceptos básicos Valuaciones DDJJ"
+    },
+    {
+      "type": "li",
+      "text": "Conceptos básicos"
+    },
+    {
+      "type": "li",
+      "text": "Valuaciones"
+    },
+    {
+      "type": "li",
+      "text": "DDJJ"
+    },
+    {
+      "type": "li",
+      "text": "Ayuda"
+    },
+    {
+      "type": "li",
+      "text": "Ganancias y Bienes Personales"
+    },
+    {
+      "type": "li",
+      "text": "Bienes Personales"
+    },
+    {
+      "type": "li",
+      "text": "Declaración Jurada"
+    },
+    {
+      "type": "li",
+      "text": "Declaración jurada determinativa"
+    },
+    {
+      "type": "h1",
+      "text": "Declaración jurada"
+    },
+    {
+      "type": "p",
+      "text": "Información sobre las formas de presentación, pago y vencimientos."
+    },
+    {
+      "type": "li",
+      "text": "Determinativa"
+    },
+    {
+      "type": "li",
+      "text": "Informativa"
+    },
+    {
+      "type": "li",
+      "text": "Presentación"
+    },
+    {
+      "type": "li",
+      "text": "Pago"
+    },
+    {
+      "type": "li",
+      "text": "Vencimientos"
+    },
+    {
+      "type": "li",
+      "text": "Anticipos"
+    },
+    {
+      "type": "h2",
+      "text": "Declaración jurada determinativa"
+    },
+    {
+      "type": "h3",
+      "text": "¿Qué es?"
+    },
+    {
+      "type": "p",
+      "text": "La declaración jurada de carácter determinativa es una presentación que realizás ante el organismo en la que determinás el saldo a pagar, es decir, establecés el monto a favor del organismo que te corresponde ingresar por un período fiscal determinado."
+    },
+    {
+      "type": "h3",
+      "text": "¿Tengo que presentarla?"
+    },
+    {
+      "type": "p",
+      "text": "Tendrás que inscribirte en el impuesto y presentar la declaración jurada que establece el monto a pagar, cuando tus bienes al 31 de diciembre, se encuentren valuados por un monto superior a:"
+    },
+    {
+      "type": "li",
+      "text": "Para el período 2024: $ 292.994.964,89"
+    },
+    {
+      "type": "li",
+      "text": "Para el período 2023: $ 100.000.000"
+    },
+    {
+      "type": "li",
+      "text": "Para el período 2022: $ 11.282.141,08"
+    },
+    {
+      "type": "li",
+      "text": "Para el período 2021: $ 6.000.000"
+    },
+    {
+      "type": "li",
+      "text": "Para el período 2020: $ 2.000.000"
+    },
+    {
+      "type": "li",
+      "text": "Para el período 2019: $ 2.000.000"
+    },
+    {
+      "type": "li",
+      "text": "Para el período 2018: $ 1.050.000"
+    },
+    {
+      "type": "h3",
+      "text": "¿Cuándo no tengo que presentar la declaración jurada?"
+    },
+    {
+      "type": "p",
+      "text": "Cuando el valor de todos de tus bienes, alcanzados por el impuesto y no alcanzados, no supere el monto mínimo de valuación a partir del cual se aplica el impuesto, no estarás obligado a presentar la declaración jurada del próximo período fiscal, siempre que, hasta el 31 de diciembre de este período fiscal, solicites la cancelación de la inscripción en el impuesto."
+    },
+    {
+      "type": "p",
+      "text": "Si la valuación del conjunto de tus bienes -alcanzados por el impuesto y no alcanzados- supera el monto mínimo de valuación a partir del cual se aplica el impuesto, tendrás que sumar su valuación tomando en cuenta únicamente los bienes alcanzados. Si de este modo no superan el monto mencionado, no estarás obligado a inscribirte en el Impuesto sobre los Bienes Personales ni presentar la declaración jurada."
+    },
+    {
+      "type": "p",
+      "text": "IMPORTANTE: si ya estás inscripto en el impuesto, deberás presentar tu declaración jurada incluso si no superás el mínimo establecido."
+    },
+    {
+      "type": "h2",
+      "text": "Footer ARCA"
+    },
+    {
+      "type": "li",
+      "text": "Institucional"
+    },
+    {
+      "type": "li",
+      "text": "Denuncias"
+    },
+    {
+      "type": "li",
+      "text": "Contactos"
+    },
+    {
+      "type": "li",
+      "text": "Tus derechos y obligaciones"
+    },
+    {
+      "type": "li",
+      "text": "Transparencia"
+    },
+    {
+      "type": "li",
+      "text": "Estadísticas tributarias"
+    },
+    {
+      "type": "li",
+      "text": "Excombatientes de Malvinas"
+    },
+    {
+      "type": "li",
+      "text": "Facturación apócrifa"
+    },
+    {
+      "type": "li",
+      "text": "Constatación de comprobantes"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "anio": 2024,
+  "fuente": "ARCA",
+  "origen": "PDF_ART_94",
+  "rows": [
+    {
+      "desde": "2.720.900,00",
+      "hasta": "9.080.600,00",
+      "monto_fijo": "1",
+      "porcentaje": "0.928,00",
+      "excedente_desde": "2.720.900,00"
+    },
+    {
+      "desde": "9.080.600,00",
+      "hasta": "6.120.",
+      "monto_fijo": "00,00",
+      "porcentaje": "353.652,00",
+      "excedente_desde": "9.080.600,00"
+    },
+    {
+      "desde": "6.120.",
+      "hasta": "00,00",
+      "monto_fijo": "12.291.800,00",
+      "porcentaje": "65",
+      "excedente_desde": ".6"
+    },
+    {
+      "desde": "27.599.050,00",
+      "hasta": "91.316.075,00",
+      "monto_fijo": "5.70",
+      "porcentaje": ".93",
+      "excedente_desde": ",50"
+    }
+  ]
+}

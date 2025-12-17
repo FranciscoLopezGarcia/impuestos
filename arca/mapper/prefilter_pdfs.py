@@ -84,6 +84,28 @@ def main():
     print(GANANCIAS_TXT)
     print(BIENES_TXT)
     print(DESCARTADOS_TXT)
+    
+def get_useful_pdfs(year: int):
+    """
+    Devuelve URLs de PDFs relevantes para el año indicado
+    """
+    ganancias = []
+    bienes = []
+
+    for pdf in all_detected_pdfs:
+        url = pdf["url"]
+        text = pdf["text"].lower()
+
+        if str(year) in text:
+            if "ganancias" in text or "art. 30" in text or "art. 94" in text:
+                ganancias.append(url)
+            if "bienes personales" in text:
+                bienes.append(url)
+
+    return {
+        "ganancias": ganancias,
+        "bienes": bienes
+    }
 
 
 if __name__ == "__main__":
