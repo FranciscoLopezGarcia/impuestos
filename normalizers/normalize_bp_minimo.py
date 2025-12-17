@@ -1,25 +1,24 @@
-import json
 from pathlib import Path
-from utils import to_number
+import json
+from normalizers.utils import to_number
 
-RAW = Path("../outputs/raw_bp_determinativa.json")
+RAW = Path(__file__).resolve().parents[1] / "outputs" / "raw_bp_determinativa_2024.json"
 
 def normalize_bp_minimo():
     data = json.loads(RAW.read_text(encoding="utf-8"))
-    thresholds = data.get("thresholds", [])
-    if not thresholds:
-        return []
 
-    latest = max(thresholds, key=lambda x: x.get("year") or 0)
+    out = []
+    for item in data.get("thresholds", []):
+        out.append({
+            "concepto": "BP_MINIMO_NO_IMPONIBLE",
+            "impuesto": "BIENES_PERSONALES",
+            "anio": item.get("year"),
+            "valor_raw": item.get("amount_raw"),
+            "valor_num": to_number(item.get("amount_raw")),
+            "unidad": "ARS",
+            "fuente": "ARCA",
+            "origen": "HTML_DETERMINATIVA",
+            "url": None,
+        })
 
-    return [{
-        "concepto": "BP_MINIMO_NO_IMPONIBLE",
-        "impuesto": "BIENES_PERSONALES",
-        "anio": latest.get("year"),
-        "valor_raw": latest.get("amount_raw"),
-        "valor_num": to_number(latest.get("amount_raw")),
-        "unidad": "ARS",
-        "fuente": "ARCA",
-        "origen": "HTML_DETERMINATIVA",
-        "url": data.get("source"),
-    }]
+    return out

@@ -1,8 +1,8 @@
 import json
 from pathlib import Path
-from utils import to_number
+from normalizers.utils import to_number
 
-RAW = Path("../outputs/raw_monedas_2024.json")
+RAW = Path(__file__).resolve().parents[1] / "outputs" / "raw_monedas_2024.json"
 
 def _find_dolar(lista):
     for item in lista:

@@ -6,7 +6,7 @@ from pathlib import Path
 
 URL = "https://www.arca.gob.ar/gananciasYBienes/bienes-personales/declaracion-jurada/determinativa.asp"
 
-OUT = Path("../outputs/raw_bp_determinativa.json")
+OUT = Path(__file__).resolve().parents[1] / "outputs" / "raw_bp_determinativa_2024.json"
 OUT.parent.mkdir(parents=True, exist_ok=True)
 
 HEADERS = {"User-Agent": "Impuestos-Explorer"}

@@ -1,27 +1,32 @@
-import json
-from pathlib import Path
+from normalizers.normalize_bp_minimo import normalize_bp_minimo
+from normalizers.normalize_bp_alicuotas import normalize_bp_alicuotas
+from normalizers.normalize_bp_dolar import normalize_bp_dolar
+from normalizers.normalize_ganancias_deducciones import normalize_ganancias_deducciones
+from normalizers.normalize_ganancias_escalas import normalize_ganancias_escalas
 
-from normalize_bp_minimo import normalize_bp_minimo
-from normalize_bp_alicuotas import normalize_bp_alicuotas
-from normalize_bp_dolar import normalize_bp_dolar
-from normalize_ganancias_deducciones import normalize_ganancias_deducciones
-from normalize_ganancias_escalas import normalize_ganancias_escalas
 
-OUT = Path("../outputs/parametros_arca.json")
+def safe(fn):
+    try:
+        return fn()
+    except FileNotFoundError as e:
+        print(f"⚠️  RAW no encontrado, se omite: {e}")
+        return []
 
-def main():
+
+def normalize_all(target_year: int):
     parametros = []
-    parametros.extend(normalize_bp_minimo())
-    parametros.extend(normalize_bp_alicuotas())
-    parametros.extend(normalize_bp_dolar())
-    parametros.extend(normalize_ganancias_deducciones())
-    parametros.extend(normalize_ganancias_escalas())
 
-    OUT.write_text(json.dumps(parametros, indent=2, ensure_ascii=False), encoding="utf-8")
+    blocks = [
+        safe(normalize_bp_minimo),
+        safe(normalize_bp_alicuotas),
+        safe(normalize_bp_dolar),
+        safe(normalize_ganancias_deducciones),
+        safe(normalize_ganancias_escalas),
+    ]
 
-    print("✅ Parametros_ARCA generado")
-    print(f"Total registros: {len(parametros)}")
-    print(OUT.resolve())
+    for block in blocks:
+        for p in block:
+            if p.get("anio") in (None, target_year):
+                parametros.append(p)
 
-if __name__ == "__main__":
-    main()
+    return parametros

@@ -5,7 +5,7 @@ import pdfplumber
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 PDF = BASE_DIR / "outputs" / "pdfs" / "Deducciones-personales-art-30-liq-anual-2025.pdf"
-OUT = BASE_DIR / "outputs" / "raw_art30_2025.json"
+OUT = Path(__file__).resolve().parents[1] / "outputs" / "raw_art30_2024.json"
 
 def norm_key(label: str) -> str:
     s = label.lower().strip()

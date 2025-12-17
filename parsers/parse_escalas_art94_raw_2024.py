@@ -6,7 +6,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parents[1]
 
 PDF = BASE_DIR / "outputs" / "pdfs" / "Tabla-Art-94-LIG-liquidacion-anual-y-final-2025.pdf"
-OUT = BASE_DIR / "outputs" / "raw_escalas_2025.json"
+OUT = Path(__file__).resolve().parents[1] / "outputs" / "raw_escalas_2024.json"
 
 def parse():
     rows = []

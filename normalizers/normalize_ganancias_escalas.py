@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from utils import to_number
+from normalizers.utils import to_number
 
 RAW = Path("../outputs/raw_escalas_2025.json")
 

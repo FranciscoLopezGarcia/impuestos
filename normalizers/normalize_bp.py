@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from utils import to_number, pick_year
+from normalizers.utils import to_number, pick_year
 
 YEAR_INPUT = 2025
 RAW = Path("../outputs/raw_bp_determinativa.json")

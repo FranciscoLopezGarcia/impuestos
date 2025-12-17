@@ -4,7 +4,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-OUT = BASE_DIR / "outputs" / "raw_bienes_alicuotas_all.json"
+OUT = Path(__file__).resolve().parents[1] / "outputs" / "raw_bienes_alicuotas_2024.json"
 
 URL = "https://www.arca.gob.ar/gananciasYBienes/bienes-personales/conceptos-basicos/alicuotas.asp"
 HEADERS = {"User-Agent": "Impuestos-Explorer"}
