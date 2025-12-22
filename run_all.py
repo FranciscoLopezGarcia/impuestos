@@ -9,6 +9,7 @@ from arca.pipeline import collect_sources
 from arca.fetcher import fetch_pdfs
 from normalizers.normalize_all import normalize_all
 from parametros_arca import update_excel
+from arca.sources_by_year import sources_for_year    
 
 BASE_DIR = Path(__file__).resolve().parent
 OUTPUTS_DIR = BASE_DIR / "outputs"
@@ -22,7 +23,14 @@ def run(year: int):
     sources = collect_sources(year)
 
     # 2️⃣ Descargar PDFs
-    fetch_pdfs(sources)
+    sources = sources_for_year(year)
+
+    fetch_pdfs(
+        sources["art30"]
+        + sources["art94"]
+        + sources["moneda"]
+    )
+
 
 
     # 3️⃣ Parsers (orden explícito)
