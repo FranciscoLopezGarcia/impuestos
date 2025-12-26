@@ -1,13 +1,15 @@
 import json
 from pathlib import Path
 
-from normalize_bp_minimo import normalize_bp_minimo
-from normalize_bp_alicuotas import normalize_bp_alicuotas
-from normalize_bp_dolar import normalize_bp_dolar
-from normalize_ganancias_deducciones import normalize_ganancias_deducciones
-from normalize_ganancias_escalas import normalize_ganancias_escalas
+from codigo.normalizers.normalize_bp_minimo import normalize_bp_minimo
+from codigo.normalizers.normalize_bp_alicuotas import normalize_bp_alicuotas
+from codigo.normalizers.normalize_bp_dolar import normalize_bp_dolar
+from codigo.normalizers.normalize_ganancias_deducciones import normalize_ganancias_deducciones
+from codigo.normalizers.normalize_ganancias_escalas import normalize_ganancias_escalas
+from codigo.paths import OUTPUTS_DIR
 
-OUT = Path("../outputs/parametros_arca.json")
+
+OUT = OUTPUTS_DIR / "parametros_arca.json"
 
 def main():
     parametros = []

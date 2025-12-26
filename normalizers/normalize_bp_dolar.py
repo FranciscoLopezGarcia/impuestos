@@ -1,8 +1,11 @@
 import json
 from pathlib import Path
-from utils import to_number
+from codigo.normalizers.utils import to_number
 
-RAW = Path("../outputs/raw_monedas_2024.json")
+from codigo.paths import OUTPUTS_DIR
+
+RAW = OUTPUTS_DIR / "raw_monedas_2024.json"
+
 
 def _find_dolar(lista):
     for item in lista:

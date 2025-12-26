@@ -2,10 +2,14 @@ import json
 import re
 from pathlib import Path
 import pdfplumber
+import sys
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-PDF = BASE_DIR / "outputs" / "pdfs" / "Valuaciones-2024-Moneda-Extranjera.pdf"
-OUT = BASE_DIR / "outputs" / "raw_monedas_2024.json"
+FILES_DIR = Path(r"C:\Users\franl\Desktop\impuestos\files")
+year = int(sys.argv[1]) if len(sys.argv) > 1 else 2024
+PDF = FILES_DIR / f"Valuaciones-{year}-Moneda-Extranjera.pdf"
+OUT = BASE_DIR / "outputs" / f"raw_monedas_{year}.json"
+
 
 MONEY_RE = re.compile(r"\d{1,3}(?:\.\d{3})*,\d{2,6}")  # 1.029,000000 / 113.643,398800
 

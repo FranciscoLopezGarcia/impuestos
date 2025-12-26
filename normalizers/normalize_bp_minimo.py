@@ -1,8 +1,11 @@
 import json
 from pathlib import Path
-from utils import to_number
+from codigo.normalizers.utils import to_number
+from codigo.paths import OUTPUTS_DIR
 
-RAW = Path("../outputs/raw_bp_determinativa.json")
+RAW = OUTPUTS_DIR / "raw_bp_determinativa.json"
+
+
 
 def normalize_bp_minimo():
     data = json.loads(RAW.read_text(encoding="utf-8"))

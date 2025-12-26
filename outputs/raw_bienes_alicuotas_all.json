@@ -1,9 +1,9 @@
 {
-  "anio": 2024,
   "fuente": "ARCA",
   "tablas": [
     {
-      "tabla_index": 0,
+      "index": 0,
+      "contexto": "",
       "rows": [
         [
           "Valor Total de los Bienes que exceda el MNI",
@@ -46,7 +46,8 @@
       ]
     },
     {
-      "tabla_index": 1,
+      "index": 1,
+      "contexto": "",
       "rows": [
         [
           "Valor Total de los Bienes que exceda el MNI",
@@ -89,7 +90,8 @@
       ]
     },
     {
-      "tabla_index": 2,
+      "index": 2,
+      "contexto": "",
       "rows": [
         [
           "Valor Total de los Bienes que exceda el MNI",
@@ -139,7 +141,8 @@
       ]
     },
     {
-      "tabla_index": 3,
+      "index": 3,
+      "contexto": "",
       "rows": [
         [
           "Valor Total de los Bienes que exceda el MNI",

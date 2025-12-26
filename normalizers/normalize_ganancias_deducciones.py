@@ -1,8 +1,12 @@
 import json
 from pathlib import Path
-from utils import to_number
+from codigo.normalizers.utils import to_number
 
-RAW = Path("../outputs/raw_art30_2025.json")
+from codigo.paths import OUTPUTS_DIR
+
+RAW = OUTPUTS_DIR / "raw_art30_2024.json"
+
+
 
 def normalize_ganancias_deducciones():
     data = json.loads(RAW.read_text(encoding="utf-8"))

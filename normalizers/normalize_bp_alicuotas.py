@@ -1,8 +1,13 @@
 import json
-from pathlib import Path
-from utils import to_number
+from codigo.paths import OUTPUTS_DIR
+from codigo.normalizers.utils import to_number
 
-RAW = Path("../outputs/raw_bienes_alicuotas_2024.json")
+RAW = OUTPUTS_DIR / "raw_bienes_alicuotas_all.json"
+
+
+
+
+
 
 def _extract_tramos_from_table(rows):
     """
