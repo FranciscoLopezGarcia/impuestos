@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 from codigo.normalizers.utils import to_number
-
+from codigo.paths import ANIO_TRABAJO
 from codigo.paths import OUTPUTS_DIR
 
 RAW = OUTPUTS_DIR / "raw_art94_2024.json"
@@ -13,7 +13,7 @@ def normalize_ganancias_escalas():
     # tu raw es LISTA directa
     if isinstance(data, list):
         tramos = data
-        anio = None
+        anio = ANIO_TRABAJO
         url = None
         fuente = "ARCA"
     else:

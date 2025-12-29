@@ -1,6 +1,7 @@
 import json
 from codigo.paths import OUTPUTS_DIR
 from codigo.normalizers.utils import to_number
+from codigo.paths import ANIO_TRABAJO
 
 RAW = OUTPUTS_DIR / "raw_bienes_alicuotas_all.json"
 
@@ -45,7 +46,8 @@ def _extract_tramos_from_table(rows):
 
 def normalize_bp_alicuotas():
     data = json.loads(RAW.read_text(encoding="utf-8"))
-    anio = data.get("anio")
+    anio = data.get("anio") or ANIO_TRABAJO
+
     tablas = data.get("tablas", [])
     if not tablas:
         return []
