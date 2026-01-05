@@ -1,0 +1,103 @@
+{
+  "anio": 2024,
+  "fuente": "ARCA",
+  "divisas": [
+    {
+      "descripcion": "1 DOLAR U.S.A.",
+      "comprador": "1.029,000000",
+      "vendedor": "1.032,000000"
+    },
+    {
+      "descripcion": "1 LIBRA ESTERLINA",
+      "comprador": "1.290,366000",
+      "vendedor": "1.297,224000"
+    },
+    {
+      "descripcion": "1 EURO",
+      "comprador": "1.068,616500",
+      "vendedor": "1.074,312000"
+    },
+    {
+      "descripcion": "1 DÓLAR AUSTRALIANO",
+      "comprador": "639,420600",
+      "vendedor": "643,348800"
+    },
+    {
+      "descripcion": "100 FRANCOS SUIZOS",
+      "comprador": "113.643,398800",
+      "vendedor": "114.130,595400"
+    },
+    {
+      "descripcion": "100 YENES",
+      "comprador": "654,624300",
+      "vendedor": "657,670600"
+    },
+    {
+      "descripcion": "100 DOLARES CANADIENSES",
+      "comprador": "71.651,774900",
+      "vendedor": "71.968,575500"
+    },
+    {
+      "descripcion": "100 CORONAS DANESAS",
+      "comprador": "14.315,888100",
+      "vendedor": "14.458,522800"
+    },
+    {
+      "descripcion": "100 CORONAS NORUEGAS",
+      "comprador": "9.048,215900",
+      "vendedor": "9.173,090100"
+    },
+    {
+      "descripcion": "100 CORONAS SUECAS",
+      "comprador": "9.307,000300",
+      "vendedor": "9.435,501900"
+    },
+    {
+      "descripcion": "1 DOLAR NEOZELANDES",
+      "comprador": "567,464500",
+      "vendedor": "595,837700"
+    },
+    {
+      "descripcion": "100 YUANREMMI",
+      "comprador": "13.755,271700",
+      "vendedor": "14.443,035300"
+    }
+  ],
+  "billetes": [
+    {
+      "descripcion": "1 DÓLAR USA",
+      "comprador": "1.012,500000",
+      "vendedor": "1.052,500000"
+    },
+    {
+      "descripcion": "100 PESO URUGUAYO",
+      "comprador": "2.083,000000",
+      "vendedor": "2.483,000000"
+    },
+    {
+      "descripcion": "100 PESO CHILENO",
+      "comprador": "99,340000",
+      "vendedor": "109,340000"
+    },
+    {
+      "descripcion": "100 REAL",
+      "comprador": "17.075,000000",
+      "vendedor": "18.075,000000"
+    },
+    {
+      "descripcion": "100 GUARANÍ",
+      "comprador": "11,560000",
+      "vendedor": "13,560000"
+    },
+    {
+      "descripcion": "100 PESO COLOMBIANO",
+      "comprador": "22,250000",
+      "vendedor": "26,250000"
+    },
+    {
+      "descripcion": "100 PESO MEXICANO",
+      "comprador": "4.812,000000",
+      "vendedor": "5.412,000000"
+    }
+  ]
+}

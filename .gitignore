@@ -48,3 +48,9 @@ arca_mapper/outputs/
 
 *.PDF
 *.pdf
+
+
+/venv/
+__pycache__/
+*.pyc
+/outputs/*.json   (solo para prod; dejalos en local)
