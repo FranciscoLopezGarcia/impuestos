@@ -1,56 +1,103 @@
-# =========================
-# Python
-# =========================
+
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 
-# =========================
-# Virtual environment
-# =========================
-venv/
-.venv/
-ENV/
-env/
+# C extensions
+*.so
 
-# =========================
-# VS Code / IDEs
-# =========================
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+*.egg-info/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# envs
+env/
+.env
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# VS Code
 .vscode/
+
+# PyCharm
 .idea/
+.idea/*
 *.iml
 
-# =========================
-# OS files
-# =========================
+# macOS
 .DS_Store
+
+# Windows
 Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# =========================
-# Logs & reports
-# =========================
+# Logs
 *.log
-reports/*.txt
+logs/
 
-# =========================
-# Downloaded sources (ARCA)
-# =========================
-arca_explorer/sources/
-arca_explorer/reports/
-arca_mapper/outputs/
+# Secrets and local config
+.env*
+local_settings.py
+secrets.yml
+*.pem
+*.key
 
-# =========================
-# Temporary / backups
-# =========================
-*.tmp
+# Output / generated data
+outputs/
+
+# Excel work files (optionally ignore user files)
+*.xlsx
+*.xlsm
+*.xls
+
+# Backup files
 *.bak
-*.swp
+*.orig
+*.tmp
 
-*.PDF
-*.pdf
+# Docker
+.dockerenv
 
-
-/venv/
-__pycache__/
-*.pyc
-/outputs/*.json   (solo para prod; dejalos en local)
+# mypy
+.mypy_cache/
