@@ -12,11 +12,8 @@ from config.settings import RAW_DIR, NORMALIZED_DIR, FILES_DIR
 from config.constants import YEARS_WITH_SUBPERIODS
 from core.cache_manager import CacheManager
 from utils.logger import get_logger
-from parsers.art30_parser import Art30SingleParser
-
-
-# Imports de parsers (los crearemos después)
-from parsers.art30_parser import Art30Parser
+# Imports de parsers
+from parsers.art30_parser import Art30Parser as Art30SingleParser
 from parsers.art94_parser import Art94Parser
 from parsers.bp_alicuotas_parser import BPAlicuotasParser
 from parsers.bp_minimo_parser import BPMinimoParser
