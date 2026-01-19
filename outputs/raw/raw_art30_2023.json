@@ -1,0 +1,15 @@
+{
+  "anio": 2023,
+  "fuente": "ARCA",
+  "origen": "PDF_ART_30",
+  "archivo": "Deducciones-personales-art-30-liquidacion-anual-2023.pdf",
+  "items": {
+    "ganancia_no_imponible": "451.683,19",
+    "cargas_familia_conyuge": "421.088,24",
+    "cargas_familia_hijo": "212.356,37",
+    "cargas_familia_hijo_incapaz": "424.712,74",
+    "deduccion_especial_ap1": "1.580.891,18",
+    "deduccion_especial_ap1_nuevo": "1.806.732,78",
+    "deduccion_especial_ap2": "2.168.079,35"
+  }
+}

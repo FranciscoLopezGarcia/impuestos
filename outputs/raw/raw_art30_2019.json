@@ -1,0 +1,15 @@
+{
+  "anio": 2019,
+  "fuente": "ARCA",
+  "origen": "PDF_ART_30",
+  "archivo": "Deducciones-personales-art-30-liquidacion-anual-2019.pdf",
+  "items": {
+    "ganancia_no_imponible": "85.848,99",
+    "cargas_familia_conyuge": "80.033,97",
+    "cargas_familia_hijo": "40.361,43",
+    "cargas_familia_hijo_incapaz": "0,00",
+    "deduccion_especial_ap1": "171.697,97",
+    "deduccion_especial_ap1_nuevo": "214.622,47",
+    "deduccion_especial_ap2": "412.075,14"
+  }
+}

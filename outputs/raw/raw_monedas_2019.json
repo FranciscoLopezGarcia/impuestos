@@ -1,0 +1,40 @@
+{
+  "anio": 2019,
+  "fuente": "ARCA",
+  "divisas": [
+    { "descripcion": "1 DÓLAR USA",
+    "comprador": "59,690000",
+    "vendedor": "59,890000" },
+
+    { "descripcion": "1 LIBRA ESTERLINA",
+    "comprador": "78,265500",
+    "vendedor": "78,707400" },
+
+    { "descripcion": "1 EURO",
+    "comprador": "66,852800",
+    "vendedor": "67,226500" },
+
+    { "descripcion": "100 FRANCOS SUIZOS", 
+    "comprador": "6.163,218100", 
+    "vendedor": "6.192,454300" },
+
+    { "descripcion": "100 YENES",
+    "comprador": "54,784700",
+    "vendedor": "55,047400" },
+
+    { "descripcion": "100 DÓLARES CANADIENSES", 
+    "comprador": "4.569,600300", 
+    "vendedor": "4.591,355300" },
+
+    { "descripcion": "100 CORONAS DANESAS", 
+    "comprador": "894,232300", 
+    "vendedor": "903,158100" },
+    { "descripcion": "100 CORONAS NORUEGAS", 
+    "comprador": "676,647200", 
+    "vendedor": "684,845600" },
+
+    { "descripcion": "100 CORONAS SUECAS", 
+    "comprador": "638,248300", 
+    "vendedor": "646,465000" }
+  ]
+}

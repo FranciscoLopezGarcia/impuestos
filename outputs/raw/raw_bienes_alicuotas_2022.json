@@ -1,0 +1,8 @@
+{
+  "anio": 2022,
+  "fuente": "ARCA",
+  "alicuotas": {
+    "pais": { "rows": [4] },
+    "exterior": { "rows": [5] }
+  }
+}

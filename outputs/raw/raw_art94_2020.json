@@ -1,0 +1,65 @@
+[
+  {
+    "desde": "0,00",
+    "hasta": "47.669,16",
+    "monto_fijo": "0,00",
+    "porcentaje": "5",
+    "excedente_desde": "0,00"
+  },
+  {
+    "desde": "47.669,16",
+    "hasta": "95.338,32",
+    "monto_fijo": "2.383,46",
+    "porcentaje": "9",
+    "excedente_desde": "47.669,16"
+  },
+  {
+    "desde": "95.338,32",
+    "hasta": "143.007,48",
+    "monto_fijo": "6.673,68",
+    "porcentaje": "12",
+    "excedente_desde": "95.338,32"
+  },
+  {
+    "desde": "143.007,48",
+    "hasta": "190.676,65",
+    "monto_fijo": "12.393,98",
+    "porcentaje": "15",
+    "excedente_desde": "143.007,48"
+  },
+  {
+    "desde": "190.676,65",
+    "hasta": "286.014,96",
+    "monto_fijo": "19.544,36",
+    "porcentaje": "19",
+    "excedente_desde": "190.676,65"
+  },
+  {
+    "desde": "286.014,96",
+    "hasta": "381.353,28",
+    "monto_fijo": "37.658,64",
+    "porcentaje": "23",
+    "excedente_desde": "286.014,96"
+  },
+  {
+    "desde": "381.353,28",
+    "hasta": "572.029,92",
+    "monto_fijo": "59.586,45",
+    "porcentaje": "27",
+    "excedente_desde": "381.353,28"
+  },
+  {
+    "desde": "572.029,92",
+    "hasta": "762.706,57",
+    "monto_fijo": "111.069,14",
+    "porcentaje": "31",
+    "excedente_desde": "572.029,92"
+  },
+  {
+    "desde": "762.706,57",
+    "hasta": "en adelante",
+    "monto_fijo": "170.178,90",
+    "porcentaje": "35",
+    "excedente_desde": "762.706,57"
+  }
+]

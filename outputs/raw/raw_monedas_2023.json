@@ -1,0 +1,26 @@
+{
+  "anio": 2023,
+  "fuente": "ARCA",
+  "divisas": [
+    { "descripcion": "1 DOLAR U.S.A.", "comprador": "805,450000", "vendedor": "808,450000" },
+    { "descripcion": "1 LIBRA ESTERLINA", "comprador": "1.026,626600", "vendedor": "1.032,875700" },
+    { "descripcion": "1 EURO", "comprador": "889,377900", "vendedor": "894,711600" },
+    { "descripcion": "1 DÓLAR AUSTRALIANO", "comprador": "549,236400", "vendedor": "552,899000" },
+    { "descripcion": "100 FRANCOS SUIZOS", "comprador": "95.825,157100", "vendedor": "96.312,098100" },
+    { "descripcion": "100 YENES", "comprador": "570,877500", "vendedor": "573,934700" },
+    { "descripcion": "100 DOLARES CANADIENSES", "comprador": "60.919,736100", "vendedor": "61.233,284700" },
+    { "descripcion": "100 CORONAS DANESAS", "comprador": "11.920,197100", "vendedor": "12.044,462000" },
+    { "descripcion": "100 CORONAS NORUEGAS", "comprador": "7.929,692400", "vendedor": "8.037,499300" },
+    { "descripcion": "100 CORONAS SUECAS", "comprador": "7.990,829800", "vendedor": "8.101,350400" },
+    { "descripcion": "1 DOLAR NEOZELANDES", "comprador": "498,952600", "vendedor": "523,900200" },
+    { "descripcion": "100 YUANREMMI", "comprador": "11.059,060900", "vendedor": "11.612,013900" }
+  ],
+  "billetes": [
+    { "descripcion": "1 DÓLAR USA", "comprador": "788,250000", "vendedor": "828,250000" },
+    { "descripcion": "100 PESO URUGUAYO", "comprador": "2.137,000000", "vendedor": "2.267,000000" },
+    { "descripcion": "100 PESO CHILENO", "comprador": "88,290000", "vendedor": "98,290000" },
+    { "descripcion": "100 REAL", "comprador": "16.800,000000", "vendedor": "17.800,000000" },
+    { "descripcion": "100 GUARANÍ", "comprador": "10,880000", "vendedor": "11,680000" },
+    { "descripcion": "100 PESO COLOMBIANO", "comprador": "21,790000", "vendedor": "24,290000" }
+  ]
+}

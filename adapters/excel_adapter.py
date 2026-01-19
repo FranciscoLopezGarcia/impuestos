@@ -1,7 +1,7 @@
 import json
 from openpyxl import load_workbook
 from pathlib import Path
-from config.paths import NORMALIZED_DIR
+from configs.paths import NORMALIZED_DIR
 
 SHEET_NAME = "Parametros_ARCA"
 

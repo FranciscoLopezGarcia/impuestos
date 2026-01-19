@@ -1,0 +1,15 @@
+{
+  "anio": 2022,
+  "fuente": "ARCA",
+  "origen": "TABLA_HISTORICA_OFICIAL",
+  "archivo": "Vigente_segun_RG_5165_2022",
+  "items": {
+    "ganancia_no_imponible": "252.564,84",
+    "cargas_familia_conyuge": "235.457,25",
+    "cargas_familia_hijo": "118.741,97",
+    "cargas_familia_hijo_incapaz": "237.483,94",
+    "deduccion_especial_ap1": "883.976,94",
+    "deduccion_especial_ap1_nuevo": "1.010.259,36",
+    "deduccion_especial_ap2": "1.212.311,24"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "anio": 2023,
+  "fuente": "ARCA",
+  "alicuotas": {
+    "pais": { "rows": [2] },
+    "exterior": { "rows": [3] }
+  }
+}

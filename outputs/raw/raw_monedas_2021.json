@@ -1,0 +1,45 @@
+{
+  "anio": 2021,
+  "fuente": "ARCA",
+  "divisas": [
+    { "descripcion": "1 DOLAR U.S.A.", 
+    "comprador": "102,520000", 
+    "vendedor": "102,720000" },
+
+    { "descripcion": "1 LIBRA ESTERLINA", 
+    "comprador": "138,248200", 
+    "vendedor": "138,826100" },
+
+    { "descripcion": "1 EURO",
+    "comprador": "115,888600", 
+    "vendedor": "116,371500" },
+
+    { "descripcion": "1 DÓLAR AUSTRALIANO", 
+    "comprador": "74,234700", 
+    "vendedor": "74,585000" },
+
+    { "descripcion": "100 FRANCOS SUIZOS", 
+    "comprador": "11.202,321200", 
+    "vendedor": "11.239,557800" },
+
+    { "descripcion": "100 YENES", 
+    "comprador": "88,972600", 
+    "vendedor": "89,277300" },
+
+    { "descripcion": "100 DOLARES CANADIENSES",
+    "comprador": "8.017,976200",
+    "vendedor": "8.044,749100" },
+
+    { "descripcion": "100 CORONAS DANESAS",
+    "comprador": "1.557,236600",
+    "vendedor": "1.570,470400" },
+
+    { "descripcion": "100 CORONAS NORUEGAS",
+    "comprador": "1.161,033200",
+    "vendedor": "1.173,469100" },
+
+    { "descripcion": "100 CORONAS SUECAS",
+    "comprador": "1.128,967600",
+    "vendedor": "1.141,666500" }
+  ]
+}

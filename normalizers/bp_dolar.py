@@ -1,8 +1,11 @@
 import json
 from pathlib import Path
-from normalizers.utils import  to_number
+from utils import  to_number
 
-from config.paths import RAW_DIR
+import sys
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parents[1]
+RAW_DIR = BASE_DIR / "outputs" / "raw"
 
 RAW = RAW_DIR / "raw_monedas_2024.json"
 
@@ -14,10 +17,15 @@ def _find_dolar(lista):
             return item
     return None
 
-def normalize_bp_dolar():
+def normalize_bp_dolar(year_filter=None):
+
     data = json.loads(RAW.read_text(encoding="utf-8"))
     anio = data.get("anio")
     fuente = data.get("fuente", "ARCA")
+
+    # Aplicar filtro de año si existe
+    if year_filter and anio != year_filter:
+        return []
 
     billete = _find_dolar(data.get("billetes", []))
     divisa = _find_dolar(data.get("divisas", []))
