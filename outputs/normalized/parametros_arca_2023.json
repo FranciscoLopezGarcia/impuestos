@@ -1,569 +1,287 @@
-[
-  {
-    "concepto": "BP_MINIMO_NO_IMPONIBLE",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "valor_raw": "$ 100.000.000",
-    "valor_num": 100000000.0,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "HTML_DETERMINATIVA",
-    "url": "https://www.arca.gob.ar/gananciasYBienes/bienes-personales/declaracion-jurada/determinativa.asp"
+{
+  "anio_fiscal": 2023,
+  "moneda": "ARS",
+  "ganancias": {
+    "deducciones_personales": {
+      "ganancia_no_imponible": {
+        "valor": 451683.19,
+        "origen": "ART_30_INC_A"
+      },
+      "cargas_familia": {
+        "conyuge": {
+          "valor": 421088.24,
+          "origen": "ART_30_INC_B"
+        },
+        "hijo": {
+          "valor": 212356.37,
+          "origen": "ART_30_INC_B"
+        },
+        "hijo_incapaz": {
+          "valor": 424712.74,
+          "origen": "ART_30_INC_B"
+        }
+      },
+      "deduccion_especial": {
+        "apartado_1": {
+          "valor": 1580891.18,
+          "origen": "ART_30_INC_C_AP1"
+        },
+        "apartado_1_nuevos_profesionales": {
+          "valor": 1806732.78,
+          "origen": "ART_30_INC_C_AP1_NUEVO"
+        },
+        "apartado_2": {
+          "valor": 2168079.35,
+          "origen": "ART_30_INC_C_AP2"
+        },
+        "apartado_2_jubilados": {
+          "valor": null,
+          "origen": "ART_30_INC_C_AP2_JUBILADOS"
+        }
+      }
+    },
+    "deducciones_generales": {
+      "gastos_sepelio": {
+        "valor": 996.23,
+        "origen": "ART_22"
+      },
+      "intereses_hipotecarios": {
+        "valor": 20000.0,
+        "origen": "ART_81_INC_A"
+      },
+      "primas_seguros_vida": {
+        "valor": 80707.25,
+        "origen": "ART_81_INC_B"
+      },
+      "seguros_retiro": {
+        "valor": 80707.25,
+        "origen": "ART_81_INC_E"
+      },
+      "servicio_domestico": {
+        "valor": 451683.19,
+        "origen": "LEY_26844"
+      }
+    },
+    "reduccion_deducciones_personales": {
+      "aplica": false,
+      "tramos": []
+    },
+    "escala_art_94": [
+      {
+        "tramo": 1,
+        "desde": 0.0,
+        "hasta": 234676.72,
+        "monto_fijo": 0.0,
+        "alicuota": 5.0,
+        "excedente_desde": 0.0
+      },
+      {
+        "tramo": 2,
+        "desde": 234676.72,
+        "hasta": 469353.46,
+        "monto_fijo": 11733.84,
+        "alicuota": 9.0,
+        "excedente_desde": 234676.72
+      },
+      {
+        "tramo": 3,
+        "desde": 469353.46,
+        "hasta": 704030.18,
+        "monto_fijo": 32854.74,
+        "alicuota": 12.0,
+        "excedente_desde": 469353.46
+      },
+      {
+        "tramo": 4,
+        "desde": 704030.18,
+        "hasta": 938706.93,
+        "monto_fijo": 61015.95,
+        "alicuota": 15.0,
+        "excedente_desde": 704030.18
+      },
+      {
+        "tramo": 5,
+        "desde": 938706.93,
+        "hasta": 1408060.37,
+        "monto_fijo": 96217.46,
+        "alicuota": 19.0,
+        "excedente_desde": 938706.93
+      },
+      {
+        "tramo": 6,
+        "desde": 1408060.37,
+        "hasta": 1877413.82,
+        "monto_fijo": 185394.61,
+        "alicuota": 23.0,
+        "excedente_desde": 1408060.37
+      },
+      {
+        "tramo": 7,
+        "desde": 1877413.82,
+        "hasta": 2816120.72,
+        "monto_fijo": 293345.91,
+        "alicuota": 27.0,
+        "excedente_desde": 1877413.82
+      },
+      {
+        "tramo": 8,
+        "desde": 2816120.72,
+        "hasta": 3754827.7,
+        "monto_fijo": 546796.77,
+        "alicuota": 31.0,
+        "excedente_desde": 2816120.72
+      },
+      {
+        "tramo": 9,
+        "desde": 3754827.7,
+        "hasta": null,
+        "monto_fijo": 837795.93,
+        "alicuota": 35.0,
+        "excedente_desde": 3754827.7
+      }
+    ]
   },
-  {
-    "concepto": "BP_ALICUOTA_GENERAL_TRAMO_1",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "desde": null,
-    "hasta": 40107213.86,
-    "monto_fijo": null,
-    "porcentaje": 0.5,
-    "excedente_desde": null,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "HTML_ALICUOTAS",
-    "url": "https://www.arca.gob.ar/gananciasYBienes/bienes-personales/conceptos-basicos/alicuotas.asp"
+  "bienes_personales": {
+    "minimo_no_imponible": {
+      "valor": 100000000.0,
+      "origen": "HTML_DETERMINATIVA"
+    },
+    "alicuotas_argentina": [
+      {
+        "tramo": 1,
+        "desde": null,
+        "hasta": 13688704.13,
+        "monto_fijo": null,
+        "alicuota": 0.5,
+        "excedente_desde": null
+      },
+      {
+        "tramo": 2,
+        "desde": 13688704.13,
+        "hasta": 29658858.97,
+        "monto_fijo": 68443.52,
+        "alicuota": 0.75,
+        "excedente_desde": 13688704.13
+      },
+      {
+        "tramo": 3,
+        "desde": 29658858.97,
+        "hasta": 82132224.82,
+        "monto_fijo": 188219.68,
+        "alicuota": 1.0,
+        "excedente_desde": 29658858.97
+      },
+      {
+        "tramo": 4,
+        "desde": 82132224.82,
+        "hasta": 456290137.84,
+        "monto_fijo": 712953.34,
+        "alicuota": 1.25,
+        "excedente_desde": 82132224.82
+      },
+      {
+        "tramo": 5,
+        "desde": 456290137.84,
+        "hasta": null,
+        "monto_fijo": 5389927.25,
+        "alicuota": 1.5,
+        "excedente_desde": 456290137.84
+      }
+    ],
+    "alicuotas_cumplidores": [
+      {
+        "tramo": 1,
+        "desde": null,
+        "hasta": 13688704.13,
+        "monto_fijo": null,
+        "alicuota": 0.0,
+        "excedente_desde": null
+      },
+      {
+        "tramo": 2,
+        "desde": 13688704.13,
+        "hasta": 29658858.97,
+        "monto_fijo": 0.0,
+        "alicuota": 0.25,
+        "excedente_desde": 13688704.13
+      },
+      {
+        "tramo": 3,
+        "desde": 29658858.97,
+        "hasta": 82132224.82,
+        "monto_fijo": 39925.39,
+        "alicuota": 0.5,
+        "excedente_desde": 29658858.97
+      },
+      {
+        "tramo": 4,
+        "desde": 82132224.82,
+        "hasta": 456290137.84,
+        "monto_fijo": 302292.22,
+        "alicuota": 0.75,
+        "excedente_desde": 82132224.82
+      },
+      {
+        "tramo": 5,
+        "desde": 456290137.84,
+        "hasta": null,
+        "monto_fijo": 3108476.56,
+        "alicuota": 1.0,
+        "excedente_desde": 456290137.84
+      }
+    ],
+    "alicuotas_exterior": [
+      {
+        "tramo": 1,
+        "desde": null,
+        "hasta": null,
+        "monto_fijo": null,
+        "alicuota": null,
+        "excedente_desde": null
+      },
+      {
+        "tramo": 2,
+        "desde": null,
+        "hasta": null,
+        "monto_fijo": null,
+        "alicuota": null,
+        "excedente_desde": null
+      },
+      {
+        "tramo": 3,
+        "desde": null,
+        "hasta": null,
+        "monto_fijo": null,
+        "alicuota": null,
+        "excedente_desde": null
+      },
+      {
+        "tramo": 4,
+        "desde": null,
+        "hasta": null,
+        "monto_fijo": null,
+        "alicuota": null,
+        "excedente_desde": null
+      }
+    ],
+    "tipo_cambio_31_12": {
+      "dolar_billete_compra": {
+        "valor": null
+      },
+      "dolar_billete_venta": {
+        "valor": null
+      },
+      "dolar_divisa_compra": {
+        "valor": 805.45
+      },
+      "dolar_divisa_venta": {
+        "valor": 808.45
+      }
+    }
   },
-  {
-    "concepto": "BP_ALICUOTA_GENERAL_TRAMO_2",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "desde": 40107213.86,
-    "hasta": 86898963.43,
-    "monto_fijo": 200536.07,
-    "porcentaje": 0.75,
-    "excedente_desde": 40107213.86,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "HTML_ALICUOTAS",
-    "url": "https://www.arca.gob.ar/gananciasYBienes/bienes-personales/conceptos-basicos/alicuotas.asp"
-  },
-  {
-    "concepto": "BP_ALICUOTA_GENERAL_TRAMO_3",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "desde": 86898963.43,
-    "hasta": 240643283.28,
-    "monto_fijo": 551474.19,
-    "porcentaje": 1.0,
-    "excedente_desde": 86898963.43,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "HTML_ALICUOTAS",
-    "url": "https://www.arca.gob.ar/gananciasYBienes/bienes-personales/conceptos-basicos/alicuotas.asp"
-  },
-  {
-    "concepto": "BP_ALICUOTA_GENERAL_TRAMO_4",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "desde": 240643283.28,
-    "hasta": null,
-    "monto_fijo": 2088917.39,
-    "porcentaje": 1.25,
-    "excedente_desde": 240643283.28,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "HTML_ALICUOTAS",
-    "url": "https://www.arca.gob.ar/gananciasYBienes/bienes-personales/conceptos-basicos/alicuotas.asp"
-  },
-  {
-    "concepto": "BP_ALICUOTA_CUMPLIDORES_TRAMO_1",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "desde": null,
-    "hasta": 40107213.86,
-    "monto_fijo": null,
-    "porcentaje": 0.0,
-    "excedente_desde": null,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "HTML_ALICUOTAS",
-    "url": "https://www.arca.gob.ar/gananciasYBienes/bienes-personales/conceptos-basicos/alicuotas.asp"
-  },
-  {
-    "concepto": "BP_ALICUOTA_CUMPLIDORES_TRAMO_2",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "desde": 40107213.86,
-    "hasta": 86898963.43,
-    "monto_fijo": 0.0,
-    "porcentaje": 0.25,
-    "excedente_desde": 40107213.86,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "HTML_ALICUOTAS",
-    "url": "https://www.arca.gob.ar/gananciasYBienes/bienes-personales/conceptos-basicos/alicuotas.asp"
-  },
-  {
-    "concepto": "BP_ALICUOTA_CUMPLIDORES_TRAMO_3",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "desde": 86898963.43,
-    "hasta": 240643283.28,
-    "monto_fijo": 116979.37,
-    "porcentaje": 0.5,
-    "excedente_desde": 86898963.43,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "HTML_ALICUOTAS",
-    "url": "https://www.arca.gob.ar/gananciasYBienes/bienes-personales/conceptos-basicos/alicuotas.asp"
-  },
-  {
-    "concepto": "BP_ALICUOTA_CUMPLIDORES_TRAMO_4",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "desde": 240643283.28,
-    "hasta": null,
-    "monto_fijo": 885700.97,
-    "porcentaje": 0.75,
-    "excedente_desde": 240643283.28,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "HTML_ALICUOTAS",
-    "url": "https://www.arca.gob.ar/gananciasYBienes/bienes-personales/conceptos-basicos/alicuotas.asp"
-  },
-  {
-    "concepto": "BP_DOLAR_BILLETE_COMP_31_12",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "valor_raw": "788,250000",
-    "valor_num": 788.25,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_MONEDA_EXTRANJERA",
-    "url": null
-  },
-  {
-    "concepto": "BP_DOLAR_BILLETE_VEND_31_12",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "valor_raw": "828,250000",
-    "valor_num": 828.25,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_MONEDA_EXTRANJERA",
-    "url": null
-  },
-  {
-    "concepto": "BP_DOLAR_DIVISA_COMP_31_12",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "valor_raw": "805,450000",
-    "valor_num": 805.45,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_MONEDA_EXTRANJERA",
-    "url": null
-  },
-  {
-    "concepto": "BP_DOLAR_DIVISA_VEND_31_12",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "valor_raw": "808,450000",
-    "valor_num": 808.45,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_MONEDA_EXTRANJERA",
-    "url": null
-  },
-  {
-    "concepto": "GAN_DED_GANANCIA_NO_IMPONIBLE",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "valor_raw": "451.683,19",
-    "valor_num": 451683.19,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_30",
-    "url": null
-  },
-  {
-    "concepto": "GAN_DED_CARGAS_FAMILIA_CONYUGE",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "valor_raw": "421.088,24",
-    "valor_num": 421088.24,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_30",
-    "url": null
-  },
-  {
-    "concepto": "GAN_DED_CARGAS_FAMILIA_HIJO",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "valor_raw": "212.356,37",
-    "valor_num": 212356.37,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_30",
-    "url": null
-  },
-  {
-    "concepto": "GAN_DED_CARGAS_FAMILIA_HIJO_INCAPAZ",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "valor_raw": "424.712,74",
-    "valor_num": 424712.74,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_30",
-    "url": null
-  },
-  {
-    "concepto": "GAN_DED_DEDUCCION_ESPECIAL_AP1",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "valor_raw": "1.580.891,18",
-    "valor_num": 1580891.18,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_30",
-    "url": null
-  },
-  {
-    "concepto": "GAN_DED_DEDUCCION_ESPECIAL_AP1_NUEVO",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "valor_raw": "1.806.732,78",
-    "valor_num": 1806732.78,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_30",
-    "url": null
-  },
-  {
-    "concepto": "GAN_DED_DEDUCCION_ESPECIAL_AP2",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "valor_raw": "2.168.079,35",
-    "valor_num": 2168079.35,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_30",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_1",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "desde": 0.0,
-    "hasta": 234676.72,
-    "monto_fijo": 0.0,
-    "porcentaje": 5.0,
-    "excedente_desde": 0.0,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_2",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "desde": 234676.72,
-    "hasta": 469353.46,
-    "monto_fijo": 11733.84,
-    "porcentaje": 9.0,
-    "excedente_desde": 234676.72,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_3",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "desde": 469353.46,
-    "hasta": 704030.18,
-    "monto_fijo": 32854.74,
-    "porcentaje": 12.0,
-    "excedente_desde": 469353.46,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_4",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "desde": 704030.18,
-    "hasta": 938706.93,
-    "monto_fijo": 61015.95,
-    "porcentaje": 15.0,
-    "excedente_desde": 704030.18,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_5",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "desde": 938706.93,
-    "hasta": 1408060.37,
-    "monto_fijo": 96217.46,
-    "porcentaje": 19.0,
-    "excedente_desde": 938706.93,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_6",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "desde": 1408060.37,
-    "hasta": 1877413.82,
-    "monto_fijo": 185394.61,
-    "porcentaje": 23.0,
-    "excedente_desde": 1408060.37,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_7",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "desde": 1877413.82,
-    "hasta": 2816120.72,
-    "monto_fijo": 293345.91,
-    "porcentaje": 27.0,
-    "excedente_desde": 1877413.82,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_8",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "desde": 2816120.72,
-    "hasta": 3754827.7,
-    "monto_fijo": 546796.77,
-    "porcentaje": 31.0,
-    "excedente_desde": 2816120.72,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_9",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "desde": 3754827.7,
-    "hasta": null,
-    "monto_fijo": 837795.93,
-    "porcentaje": 35.0,
-    "excedente_desde": 3754827.7,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_DED_ACTIVIDAD_PERSONAL_L49",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "valor_raw": "1.029.082,76",
-    "valor_num": 1029082.76,
-    "unidad": "ARS",
-    "fuente": "AFIP",
-    "origen": "LEY_20628_ART_49",
-    "url": "https://www.afip.gob.ar/ganancias/deducciones-personales-2023.asp",
-    "notas": "Deducción especial por actividad personal según Art. 49"
-  },
-  {
-    "concepto": "GAN_DED_GASTOS_SEPELIO",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "valor_raw": "996,23",
-    "valor_num": 996.23,
-    "unidad": "ARS",
-    "fuente": "AFIP",
-    "origen": "LEY_20628_ART_22",
-    "url": "https://www.afip.gob.ar/ganancias/deducciones-personales-2023.asp",
-    "notas": "Tope anual fijo para gastos de sepelio"
-  },
-  {
-    "concepto": "GAN_DED_INTERESES_HIPOTECARIOS",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "valor_raw": "20.000,00",
-    "valor_num": 20000.0,
-    "unidad": "ARS",
-    "fuente": "AFIP",
-    "origen": "LEY_20628_ART_81_INC_A",
-    "url": "https://www.afip.gob.ar/ganancias/deducciones-personales-2023.asp",
-    "notas": "Intereses por préstamos hipotecarios para vivienda única"
-  },
-  {
-    "concepto": "GAN_DED_PRIMAS_SEGUROS",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "valor_raw": "42.594,00",
-    "valor_num": 42594.0,
-    "unidad": "ARS",
-    "fuente": "AFIP",
-    "origen": "LEY_20628_ART_81_INC_B",
-    "url": "https://www.afip.gob.ar/ganancias/deducciones-personales-2023.asp",
-    "notas": "Primas de seguro de vida"
-  },
-  {
-    "concepto": "GAN_DED_SEGUROS_RETIRO",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "valor_raw": "42.594,00",
-    "valor_num": 42594.0,
-    "unidad": "ARS",
-    "fuente": "AFIP",
-    "origen": "LEY_20628_ART_81_INC_E",
-    "url": "https://www.afip.gob.ar/ganancias/deducciones-personales-2023.asp",
-    "notas": "Aportes a seguros de retiro privados"
-  },
-  {
-    "concepto": "GAN_DED_SERVICIO_DOMESTICO",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "valor_raw": "451.683,19",
-    "valor_num": 451683.19,
-    "unidad": "ARS",
-    "fuente": "AFIP",
-    "origen": "LEY_26844",
-    "url": "https://www.afip.gob.ar/ganancias/deducciones-personales-2023.asp",
-    "notas": "Tope equivalente a ganancia no imponible - Ley 26.844"
-  },
-  {
-    "concepto": "GAN_DISMINUCION_TRAMO_1",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "desde": 0.0,
-    "hasta": 91000.0,
-    "porcentaje_disminucion": 0.0,
-    "unidad": "ARS/%",
-    "fuente": "AFIP",
-    "origen": "NO_APLICA",
-    "url": null,
-    "notas": "No existe tabla de disminución para 2023"
-  },
-  {
-    "concepto": "GAN_DISMINUCION_TRAMO_2",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "desde": 91000.0,
-    "hasta": 130000.0,
-    "porcentaje_disminucion": 0.0,
-    "unidad": "ARS/%",
-    "fuente": "AFIP",
-    "origen": "NO_APLICA",
-    "url": null,
-    "notas": "No existe tabla de disminución para 2023"
-  },
-  {
-    "concepto": "GAN_DISMINUCION_TRAMO_3",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "desde": 130000.0,
-    "hasta": 195000.0,
-    "porcentaje_disminucion": 0.0,
-    "unidad": "ARS/%",
-    "fuente": "AFIP",
-    "origen": "NO_APLICA",
-    "url": null,
-    "notas": "No existe tabla de disminución para 2023"
-  },
-  {
-    "concepto": "GAN_DISMINUCION_TRAMO_4",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "desde": 195000.0,
-    "hasta": 221000.0,
-    "porcentaje_disminucion": 0.0,
-    "unidad": "ARS/%",
-    "fuente": "AFIP",
-    "origen": "NO_APLICA",
-    "url": null,
-    "notas": "No existe tabla de disminución para 2023"
-  },
-  {
-    "concepto": "GAN_DISMINUCION_TRAMO_5",
-    "impuesto": "GANANCIAS",
-    "anio": 2023,
-    "desde": 221000.0,
-    "hasta": null,
-    "porcentaje_disminucion": 0.0,
-    "unidad": "ARS/%",
-    "fuente": "AFIP",
-    "origen": "NO_APLICA",
-    "url": null,
-    "notas": "No existe tabla de disminución para 2023"
-  },
-  {
-    "concepto": "BP_ALICUOTA_EXTERIOR_TRAMO_1",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "desde": null,
-    "hasta": 5641070.54,
-    "monto_fijo": null,
-    "porcentaje": 0.7,
-    "excedente_desde": null,
-    "unidad": "ARS/%",
-    "fuente": "AFIP",
-    "origen": "LEY_23966",
-    "url": "https://www.afip.gob.ar/bienes-personales/alicoutas-2023.asp",
-    "notas": "Alícuota para bienes en el exterior - Tramo 1"
-  },
-  {
-    "concepto": "BP_ALICUOTA_EXTERIOR_TRAMO_2",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "desde": 5641070.54,
-    "hasta": 12222319.51,
-    "monto_fijo": null,
-    "porcentaje": 1.2,
-    "excedente_desde": 5641070.54,
-    "unidad": "ARS/%",
-    "fuente": "AFIP",
-    "origen": "LEY_23966",
-    "url": "https://www.afip.gob.ar/bienes-personales/alicoutas-2023.asp",
-    "notas": "Alícuota para bienes en el exterior - Tramo 2"
-  },
-  {
-    "concepto": "BP_ALICUOTA_EXTERIOR_TRAMO_3",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "desde": 12222319.51,
-    "hasta": 33846423.25,
-    "monto_fijo": null,
-    "porcentaje": 1.8,
-    "excedente_desde": 12222319.51,
-    "unidad": "ARS/%",
-    "fuente": "AFIP",
-    "origen": "LEY_23966",
-    "url": "https://www.afip.gob.ar/bienes-personales/alicoutas-2023.asp",
-    "notas": "Alícuota para bienes en el exterior - Tramo 3"
-  },
-  {
-    "concepto": "BP_ALICUOTA_EXTERIOR_TRAMO_4",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2023,
-    "desde": 33846423.25,
-    "hasta": null,
-    "monto_fijo": null,
-    "porcentaje": 2.25,
-    "excedente_desde": 33846423.25,
-    "unidad": "ARS/%",
-    "fuente": "AFIP",
-    "origen": "LEY_23966",
-    "url": "https://www.afip.gob.ar/bienes-personales/alicoutas-2023.asp",
-    "notas": "Alícuota para bienes en el exterior - Tramo 4"
+  "meta": {
+    "estructura_version": "v1.0",
+    "completitud": "INCOMPLETO",
+    "observaciones": ["Faltan alícuotas BP exterior 2023"]
   }
-]
+}

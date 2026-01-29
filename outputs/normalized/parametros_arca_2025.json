@@ -1,216 +1,247 @@
-[
-  {
-    "concepto": "BP_MINIMO_NO_IMPONIBLE",
-    "impuesto": "BIENES_PERSONALES",
-    "anio": 2025,
-    "valor_raw": "$ 384.728.044,57",
-    "valor_num": 384728044.57,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "HTML_DETERMINATIVA",
-    "url": "https://www.arca.gob.ar/gananciasYBienes/bienes-personales/declaracion-jurada/determinativa.asp"
+{
+  "anio_fiscal": 2025,
+  "moneda": "ARS",
+  "ganancias": {
+    "deducciones_personales": {
+      "ganancia_no_imponible": {
+        "valor": 4507505.52,
+        "origen": "ART_30_INC_A"
+      },
+      "cargas_familia": {
+        "conyuge": {
+          "valor": 4245166.13,
+          "origen": "ART_30_INC_B"
+        },
+        "hijo": {
+          "valor": 2140852.77,
+          "origen": "ART_30_INC_B"
+        },
+        "hijo_incapaz": {
+          "valor": 4281705.53,
+          "origen": "ART_30_INC_B"
+        }
+      },
+      "deduccion_especial": {
+        "apartado_1": {
+          "valor": 15776269.32,
+          "origen": "ART_30_INC_C_AP1"
+        },
+        "apartado_1_nuevos_profesionales": {
+          "valor": 18030022.08,
+          "origen": "ART_30_INC_C_AP1_NUEVO"
+        },
+        "apartado_2": {
+          "valor": 21636026.5,
+          "origen": "ART_30_INC_C_AP2"
+        },
+        "apartado_2_jubilados": {
+          "valor": 29194257.68,
+          "origen": "ART_30_INC_C_AP2_JUBILADOS"
+        }
+      }
+    },
+    "deducciones_generales": {
+      "gastos_sepelio": {
+        "valor": 996.23,
+        "origen": "ART_22"
+      },
+      "intereses_hipotecarios": {
+        "valor": 20000.0,
+        "origen": "ART_81_INC_A"
+      },
+      "primas_seguros_vida": {
+        "valor": 573817.13,
+        "origen": "ART_81_INC_B"
+      },
+      "seguros_retiro": {
+        "valor": 573817.13,
+        "origen": "ART_81_INC_E"
+      },
+      "servicio_domestico": {
+        "valor": 4507505.52,
+        "origen": "LEY_26844"
+      }
+    },
+    "reduccion_deducciones_personales": {
+      "aplica": false,
+      "tramos": []
+    },
+    "escala_art_94": [
+      {
+        "tramo": 1,
+        "desde": 0.0,
+        "hasta": 1749901.45,
+        "monto_fijo": 0.0,
+        "alicuota": 5.0,
+        "excedente_desde": 0.0
+      },
+      {
+        "tramo": 2,
+        "desde": 1749901.45,
+        "hasta": 3499802.89,
+        "monto_fijo": 87495.07,
+        "alicuota": 9.0,
+        "excedente_desde": 1749901.45
+      },
+      {
+        "tramo": 3,
+        "desde": 3499802.89,
+        "hasta": 5249704.34,
+        "monto_fijo": 244986.2,
+        "alicuota": 12.0,
+        "excedente_desde": 3499802.89
+      },
+      {
+        "tramo": 4,
+        "desde": 5249704.34,
+        "hasta": 7874556.52,
+        "monto_fijo": 454974.38,
+        "alicuota": 15.0,
+        "excedente_desde": 5249704.34
+      },
+      {
+        "tramo": 5,
+        "desde": 7874556.52,
+        "hasta": 15749113.04,
+        "monto_fijo": 848702.2,
+        "alicuota": 19.0,
+        "excedente_desde": 7874556.52
+      },
+      {
+        "tramo": 6,
+        "desde": 15749113.04,
+        "hasta": 23623669.56,
+        "monto_fijo": 2344867.94,
+        "alicuota": 23.0,
+        "excedente_desde": 15749113.04
+      },
+      {
+        "tramo": 7,
+        "desde": 23623669.56,
+        "hasta": 35435504.34,
+        "monto_fijo": 4156015.94,
+        "alicuota": 27.0,
+        "excedente_desde": 23623669.56
+      },
+      {
+        "tramo": 8,
+        "desde": 35435504.34,
+        "hasta": 53153256.52,
+        "monto_fijo": 7345211.33,
+        "alicuota": 31.0,
+        "excedente_desde": 35435504.34
+      },
+      {
+        "tramo": 9,
+        "desde": 53153256.52,
+        "hasta": null,
+        "monto_fijo": 12837714.51,
+        "alicuota": 35.0,
+        "excedente_desde": 53153256.52
+      }
+    ]
   },
-  {
-    "concepto": "GAN_DED_GANANCIA_NO_IMPONIBLE",
-    "impuesto": "GANANCIAS",
-    "anio": 2025,
-    "valor_raw": "4.507.505,52",
-    "valor_num": 4507505.52,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_30",
-    "url": null
+  "bienes_personales": {
+    "minimo_no_imponible": {
+      "valor": 384728044.57,
+      "origen": "HTML_DETERMINATIVA"
+    },
+    "alicuotas_argentina": [
+      {
+        "tramo": 1,
+        "desde": null,
+        "hasta": 52664283.73,
+        "monto_fijo": null,
+        "alicuota": 0.5,
+        "excedente_desde": null
+      },
+      {
+        "tramo": 2,
+        "desde": 52664283.73,
+        "hasta": 114105948.16,
+        "monto_fijo": 263321.42,
+        "alicuota": 0.75,
+        "excedente_desde": 52664283.73
+      },
+      {
+        "tramo": 3,
+        "desde": 114105948.16,
+        "hasta": null,
+        "monto_fijo": 724133.89,
+        "alicuota": 1.0,
+        "excedente_desde": 114105948.16
+      }
+    ],
+    "alicuotas_cumplidores": [
+      {
+        "tramo": 1,
+        "desde": null,
+        "hasta": 52664283.73,
+        "monto_fijo": null,
+        "alicuota": 0.0,
+        "excedente_desde": null
+      },
+      {
+        "tramo": 2,
+        "desde": 52664283.73,
+        "hasta": 114105948.16,
+        "monto_fijo": 0.0,
+        "alicuota": 0.25,
+        "excedente_desde": 52664283.73
+      },
+      {
+        "tramo": 3,
+        "desde": 114105948.16,
+        "hasta": null,
+        "monto_fijo": 153604.17,
+        "alicuota": 0.5,
+        "excedente_desde": 114105948.16
+      }
+    ],
+    "alicuotas_exterior": [
+      {
+        "tramo": 1,
+        "desde": null,
+        "hasta": null,
+        "monto_fijo": null,
+        "alicuota": null,
+        "excedente_desde": null
+      },
+      {
+        "tramo": 2,
+        "desde": null,
+        "hasta": null,
+        "monto_fijo": null,
+        "alicuota": null,
+        "excedente_desde": null
+      },
+      {
+        "tramo": 3,
+        "desde": null,
+        "hasta": null,
+        "monto_fijo": null,
+        "alicuota": null,
+        "excedente_desde": null
+      }
+    ],
+    "tipo_cambio_31_12": {
+      "dolar_billete_compra": {
+        "valor": null
+      },
+      "dolar_billete_venta": {
+        "valor": null
+      },
+      "dolar_divisa_compra": {
+        "valor": null
+      },
+      "dolar_divisa_venta": {
+        "valor": null
+      }
+    }
   },
-  {
-    "concepto": "GAN_DED_CARGAS_FAMILIA_CONYUGE",
-    "impuesto": "GANANCIAS",
-    "anio": 2025,
-    "valor_raw": "4.245.166,13",
-    "valor_num": 4245166.13,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_30",
-    "url": null
-  },
-  {
-    "concepto": "GAN_DED_CARGAS_FAMILIA_HIJO",
-    "impuesto": "GANANCIAS",
-    "anio": 2025,
-    "valor_raw": "2.140.852,77",
-    "valor_num": 2140852.77,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_30",
-    "url": null
-  },
-  {
-    "concepto": "GAN_DED_CARGAS_FAMILIA_HIJO_INCAPAZ",
-    "impuesto": "GANANCIAS",
-    "anio": 2025,
-    "valor_raw": "4.281.705,53",
-    "valor_num": 4281705.53,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_30",
-    "url": null
-  },
-  {
-    "concepto": "GAN_DED_DEDUCCION_ESPECIAL_AP1",
-    "impuesto": "GANANCIAS",
-    "anio": 2025,
-    "valor_raw": "15.776.269,32",
-    "valor_num": 15776269.32,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_30",
-    "url": null
-  },
-  {
-    "concepto": "GAN_DED_DEDUCCION_ESPECIAL_AP1_NUEVO",
-    "impuesto": "GANANCIAS",
-    "anio": 2025,
-    "valor_raw": "18.030.022,08",
-    "valor_num": 18030022.08,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_30",
-    "url": null
-  },
-  {
-    "concepto": "GAN_DED_DEDUCCION_ESPECIAL_AP2",
-    "impuesto": "GANANCIAS",
-    "anio": 2025,
-    "valor_raw": "21.636.026,50",
-    "valor_num": 21636026.5,
-    "unidad": "ARS",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_30",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_1",
-    "impuesto": "GANANCIAS",
-    "anio": 2025,
-    "desde": 0.0,
-    "hasta": 1749901.45,
-    "monto_fijo": 0.0,
-    "porcentaje": 5.0,
-    "excedente_desde": 0.0,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_2",
-    "impuesto": "GANANCIAS",
-    "anio": 2025,
-    "desde": 1749901.45,
-    "hasta": 3499802.89,
-    "monto_fijo": 87495.07,
-    "porcentaje": 9.0,
-    "excedente_desde": 1749901.45,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_3",
-    "impuesto": "GANANCIAS",
-    "anio": 2025,
-    "desde": 3499802.89,
-    "hasta": 5249704.34,
-    "monto_fijo": 244986.2,
-    "porcentaje": 12.0,
-    "excedente_desde": 3499802.89,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_4",
-    "impuesto": "GANANCIAS",
-    "anio": 2025,
-    "desde": 5249704.34,
-    "hasta": 7874556.52,
-    "monto_fijo": 454974.38,
-    "porcentaje": 34.0,
-    "excedente_desde": 5249704.34,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_5",
-    "impuesto": "GANANCIAS",
-    "anio": 2025,
-    "desde": 7874556.52,
-    "hasta": 15749113.04,
-    "monto_fijo": 848702.2,
-    "porcentaje": 19.0,
-    "excedente_desde": 7874556.52,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_6",
-    "impuesto": "GANANCIAS",
-    "anio": 2025,
-    "desde": 15749113.04,
-    "hasta": 23623669.56,
-    "monto_fijo": 2344867.94,
-    "porcentaje": 23.0,
-    "excedente_desde": 15749113.04,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_7",
-    "impuesto": "GANANCIAS",
-    "anio": 2025,
-    "desde": 23623669.56,
-    "hasta": 35435504.34,
-    "monto_fijo": 4156015.94,
-    "porcentaje": 27.0,
-    "excedente_desde": 23623669.56,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_8",
-    "impuesto": "GANANCIAS",
-    "anio": 2025,
-    "desde": 35435504.34,
-    "hasta": 53153256.52,
-    "monto_fijo": 7345211.33,
-    "porcentaje": 34.0,
-    "excedente_desde": 35435504.34,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
-  },
-  {
-    "concepto": "GAN_ESCALA_TRAMO_9",
-    "impuesto": "GANANCIAS",
-    "anio": 2025,
-    "desde": 53153256.52,
-    "hasta": null,
-    "monto_fijo": 12837714.51,
-    "porcentaje": 35.0,
-    "excedente_desde": 53153256.52,
-    "unidad": "ARS/%",
-    "fuente": "ARCA",
-    "origen": "PDF_ART_94",
-    "url": null
+  "meta": {
+    "estructura_version": "v1.0",
+    "completitud": "INCOMPLETO",
+    "observaciones": ["Falta tipo cambio 31/12/2025", "Faltan alícuotas BP exterior 2025"]
   }
-]
+}
