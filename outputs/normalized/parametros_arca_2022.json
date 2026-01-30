@@ -150,84 +150,92 @@
       {
         "tramo": 1,
         "desde": null,
-        "hasta": 13688704.13,
+        "hasta":5641070.54,
         "monto_fijo": null,
         "alicuota": 0.5,
         "excedente_desde": null
       },
       {
         "tramo": 2,
-        "desde": 13688704.13,
-        "hasta": 29658858.97,
-        "monto_fijo": 68443.52,
+        "desde": 5641070.54,
+        "hasta": 12222319.51,
+        "monto_fijo":   28205.35,
         "alicuota": 0.75,
-        "excedente_desde": 13688704.13
+        "excedente_desde": 5641070.54
       },
       {
         "tramo": 3,
-        "desde": 29658858.97,
-        "hasta": 82132224.82,
-        "monto_fijo": 188219.68,
+        "desde": 12222319.51,
+        "hasta": 33846423.25,
+        "monto_fijo":  77564.72,
         "alicuota": 1.0,
-        "excedente_desde": 29658858.97
+        "excedente_desde": 12222319.51
       },
       {
         "tramo": 4,
-        "desde": 82132224.82,
-        "hasta": 456290137.84,
-        "monto_fijo": 712953.34,
+        "desde": 33846423.25,
+        "hasta": 188035684.71,
+        "monto_fijo":293805.76,
         "alicuota": 1.25,
-        "excedente_desde": 82132224.82
+        "excedente_desde":33846423.25
       },
       {
         "tramo": 5,
-        "desde": 456290137.84,
-        "hasta": null,
-        "monto_fijo": 5389927.25,
+        "desde": 188035684.71,
+        "hasta": 564107054.14,
+        "monto_fijo":  2221171.53,
         "alicuota": 1.5,
-        "excedente_desde": 456290137.84
+        "excedente_desde": 188035684.71
+      },
+      {
+        "tramo": 6,
+        "desde": 564107054.14,
+        "hasta": null,
+        "monto_fijo":  7862242.07,
+        "alicuota": 1.75,
+        "excedente_desde": 564107054.14
       }
     ],
-    "alicuotas_cumplidores": [
+    "alicuotas_cumplidores": [ 
       {
         "tramo": 1,
         "desde": null,
-        "hasta": 13688704.13,
+        "hasta": null,
         "monto_fijo": null,
-        "alicuota": 0.0,
+        "alicuota": null,
         "excedente_desde": null
       },
       {
         "tramo": 2,
-        "desde": 13688704.13,
-        "hasta": 29658858.97,
+        "desde": null,
+        "hasta": null,
         "monto_fijo": null,
-        "alicuota": 0.25,
-        "excedente_desde": 13688704.13
+        "alicuota": null,
+        "excedente_desde": null
       },
       {
         "tramo": 3,
-        "desde": 29658858.97,
-        "hasta": 82132224.82,
-        "monto_fijo": 39925.39,
-        "alicuota": 0.5,
-        "excedente_desde": 29658858.97
-      },
-      {
-        "tramo": 4,
-        "desde": 82132224.82,
-        "hasta": 456290137.84,
-        "monto_fijo": 302292.22,
-        "alicuota": 0.75,
-        "excedente_desde": 82132224.82
-      },
-      {
-        "tramo": 5,
-        "desde": 456290137.84,
+        "desde": null,
         "hasta": null,
-        "monto_fijo": 3108476.56,
-        "alicuota": 1.0,
-        "excedente_desde": 456290137.84
+        "monto_fijo": null,
+        "alicuota": null,
+        "excedente_desde": null
+      },
+       {
+        "tramo": 4,
+        "desde": null,
+        "hasta": null,
+        "monto_fijo": null,
+        "alicuota": null,
+        "excedente_desde": null
+      },
+       {
+        "tramo": 5,
+        "desde": null,
+        "hasta": null,
+        "monto_fijo": null,
+        "alicuota": null,
+        "excedente_desde": null
       }
     ],
     "alicuotas_exterior": [

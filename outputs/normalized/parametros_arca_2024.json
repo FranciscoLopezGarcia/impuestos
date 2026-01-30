@@ -150,53 +150,62 @@
       {
         "tramo": 1,
         "desde": null,
-        "hasta": 52664283.73,
+        "hasta": 40107213.86,
         "monto_fijo": null,
         "alicuota": 0.5,
         "excedente_desde": null
       },
       {
         "tramo": 2,
-        "desde": 52664283.73,
-        "hasta": 114105948.16,
-        "monto_fijo": 263321.42,
+        "desde": 40107213.86,
+        "hasta":86898963.43,
+        "monto_fijo":200536.07,
         "alicuota": 0.75,
-        "excedente_desde": 52664283.73
+        "excedente_desde": 40107213.86
       },
       {
         "tramo": 3,
-        "desde": 114105948.16,
-        "hasta": null,
-        "monto_fijo": 724133.89,
+        "desde": 86898963.43,
+        "hasta": 240643283.28,
+        "monto_fijo": 551474.19,
         "alicuota": 1.0,
-        "excedente_desde": 114105948.16
+        "excedente_desde": 86898963.43
       }
     ],
     "alicuotas_cumplidores": [
       {
         "tramo": 1,
         "desde": null,
-        "hasta": 52664283.73,
+        "hasta": 40107213.86,
         "monto_fijo": null,
         "alicuota": 0.0,
         "excedente_desde": null
       },
       {
         "tramo": 2,
-        "desde": 52664283.73,
-        "hasta": 114105948.16,
+        "desde": 40107213.86,
+        "hasta":86898963.43,
         "monto_fijo": 0.0,
         "alicuota": 0.25,
-        "excedente_desde": 52664283.73
+        "excedente_desde": 40107213.86
       },
       {
         "tramo": 3,
-        "desde": 114105948.16,
-        "hasta": null,
-        "monto_fijo": 153604.17,
-        "alicuota": 0.5,
-        "excedente_desde": 114105948.16
+        "desde": 86898963.43,
+        "hasta":240643283.28,
+        "monto_fijo":551474.19,
+        "alicuota": 1.0,
+        "excedente_desde": 86898963.43
+      },
+      {
+        "tramo": 4,
+        "desde": 240643283.28,
+        "hasta":null,
+        "monto_fijo":	2088917.39,
+        "alicuota": 1.25,
+        "excedente_desde":240643283.28
       }
+
     ],
     "alicuotas_exterior": [
       {

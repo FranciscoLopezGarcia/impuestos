@@ -21,7 +21,7 @@
           "origen": "ART_30_INC_B"
         }
       },
-      "deduccion_especial": {
+      "deduccion_especial" : {
         "apartado_1": {
           "valor": 171697.97,
           "origen": "ART_30_INC_C_AP1"

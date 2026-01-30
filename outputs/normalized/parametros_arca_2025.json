@@ -3,13 +3,13 @@
   "moneda": "ARS",
   "ganancias": {
     "deducciones_personales": {
-      "ganancia_no_imponible": {
+      "ganancia_no_imponible": { 
         "valor": 4507505.52,
         "origen": "ART_30_INC_A"
       },
       "cargas_familia": {
         "conyuge": {
-          "valor": 4245166.13,
+          "valor": 4245166.13,  
           "origen": "ART_30_INC_B"
         },
         "hijo": {
@@ -26,7 +26,7 @@
           "valor": 15776269.32,
           "origen": "ART_30_INC_C_AP1"
         },
-        "apartado_1_nuevos_profesionales": {
+        "apartado_1_nuevos_profesionales": { 
           "valor": 18030022.08,
           "origen": "ART_30_INC_C_AP1_NUEVO"
         },
@@ -59,7 +59,7 @@
       },
       "servicio_domestico": {
         "valor": 4507505.52,
-        "origen": "LEY_26844"
+        "origen": "LEY_26844" 
       }
     },
     "reduccion_deducciones_personales": {
@@ -70,7 +70,7 @@
       {
         "tramo": 1,
         "desde": 0.0,
-        "hasta": 1749901.45,
+        "hasta": 1749901.45, 
         "monto_fijo": 0.0,
         "alicuota": 5.0,
         "excedente_desde": 0.0

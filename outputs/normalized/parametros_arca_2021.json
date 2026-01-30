@@ -186,7 +186,16 @@
         "monto_fijo": 1181250.0,
         "alicuota": 1.5,
         "excedente_desde": 100000000.0
+      },
+      {
+        "tramo": 5,
+        "desde": 300000000.0,
+        "hasta": null,
+        "monto_fijo": 4181250.00,
+        "alicuota": 1.75,
+        "excedente_desde": 300000000.0
       }
+      
     ],
     "alicuotas_cumplidores": [
       {
