@@ -238,6 +238,20 @@
         "excedente_desde": null
       }
     ],
+    "tipo_cambio_31_12": {
+      "dolar_billete_compra": {
+        "valor": null
+      },
+      "dolar_billete_venta": {
+        "valor": null
+      },
+      "dolar_divisa_compra": {
+        "valor": 176.96
+      },
+      "dolar_divisa_venta": {
+        "valor": 177.16
+      }
+    },
     "alicuotas_exterior": [
       {
         "tramo": 1,
@@ -271,21 +285,7 @@
         "alicuota": 2.25,
         "excedente_desde": null
       }
-    ],
-    "tipo_cambio_31_12": {
-      "dolar_billete_compra": {
-        "valor": null
-      },
-      "dolar_billete_venta": {
-        "valor": null
-      },
-      "dolar_divisa_compra": {
-        "valor": 176.96
-      },
-      "dolar_divisa_venta": {
-        "valor": 177.16
-      }
-    }
+    ]
   },
   "meta": {
     "estructura_version": "v1.0",

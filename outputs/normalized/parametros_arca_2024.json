@@ -170,6 +170,33 @@
         "monto_fijo": 551474.19,
         "alicuota": 1.0,
         "excedente_desde": 86898963.43
+      },
+      {
+        "tramo": 4,
+        "desde": 0,
+        "hasta": 0,
+        "monto_fijo": 0,
+        "alicuota": 0,
+        "excedente_desde": 0,
+        "origen": "COMPLETADO_CERO"
+      },
+      {
+        "tramo": 5,
+        "desde": 0,
+        "hasta": 0,
+        "monto_fijo": 0,
+        "alicuota": 0,
+        "excedente_desde": 0,
+        "origen": "COMPLETADO_CERO"
+      },
+      {
+        "tramo": 6,
+        "desde": 0,
+        "hasta": 0,
+        "monto_fijo": 0,
+        "alicuota": 0,
+        "excedente_desde": 0,
+        "origen": "COMPLETADO_CERO"
       }
     ],
     "alicuotas_cumplidores": [
@@ -204,9 +231,31 @@
         "monto_fijo":	2088917.39,
         "alicuota": 1.25,
         "excedente_desde":240643283.28
+      },
+      {
+        "tramo": 5,
+        "desde": 0,
+        "hasta": 0,
+        "monto_fijo": 0,
+        "alicuota": 0,
+        "excedente_desde": 0,
+        "origen": "COMPLETADO_CERO"
       }
-
     ],
+    "tipo_cambio_31_12": {
+      "dolar_billete_compra": {
+        "valor": 1012.5
+      },
+      "dolar_billete_venta": {
+        "valor": 1052.5
+      },
+      "dolar_divisa_compra": {
+        "valor": 1029.0
+      },
+      "dolar_divisa_venta": {
+        "valor": 1032.0
+      }
+    },
     "alicuotas_exterior": [
       {
         "tramo": 1,
@@ -231,22 +280,16 @@
         "monto_fijo": null,
         "alicuota": null,
         "excedente_desde": null
+      },
+      {
+        "tramo": 4,
+        "desde": null,
+        "hasta": null,
+        "monto_fijo": null,
+        "alicuota": null,
+        "excedente_desde": null
       }
-    ],
-    "tipo_cambio_31_12": {
-      "dolar_billete_compra": {
-        "valor": 1012.5
-      },
-      "dolar_billete_venta": {
-        "valor": 1052.5
-      },
-      "dolar_divisa_compra": {
-        "valor": 1029.0
-      },
-      "dolar_divisa_venta": {
-        "valor": 1032.0
-      }
-    }
+    ]
   },
   "meta": {
     "estructura_version": "v1.0",

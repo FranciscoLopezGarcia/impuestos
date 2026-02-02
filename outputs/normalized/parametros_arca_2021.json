@@ -188,7 +188,7 @@
         "excedente_desde": 100000000.0
       },
       {
-        "tramo": 5,
+        "tramo": 6,
         "desde": 300000000.0,
         "hasta": null,
         "monto_fijo": 4181250.00,
@@ -239,6 +239,20 @@
         "excedente_desde": null
       }
     ],
+    "tipo_cambio_31_12": {
+      "dolar_billete_compra": {
+        "valor": null
+      },
+      "dolar_billete_venta": {
+        "valor": null
+      },
+      "dolar_divisa_compra": {
+        "valor": 102.52
+      },
+      "dolar_divisa_venta": {
+        "valor": 102.72
+      }
+    },
     "alicuotas_exterior": [
       {
         "tramo": 1,
@@ -272,21 +286,7 @@
         "alicuota": 2.25,
         "excedente_desde": null
       }
-    ],
-    "tipo_cambio_31_12": {
-      "dolar_billete_compra": {
-        "valor": null
-      },
-      "dolar_billete_venta": {
-        "valor": null
-      },
-      "dolar_divisa_compra": {
-        "valor": 102.52
-      },
-      "dolar_divisa_venta": {
-        "valor": 102.72
-      }
-    }
+    ]
   },
   "meta": {
     "estructura_version": "v1.0",
